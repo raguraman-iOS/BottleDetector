@@ -32,7 +32,7 @@ https://github.com/user/BottleDetectionApp/assets/demo.gif
 
 ### Prerequisites
 
-- iOS 15.0+
+- iOS 16.0+
 - Xcode 15 or later
 - CocoaPods (`sudo gem install cocoapods`)
 
