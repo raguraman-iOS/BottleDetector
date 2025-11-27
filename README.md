@@ -1,39 +1,50 @@
-🥤 Bottle Detection App
+# 🥤 Bottle Detection App
 
-Real-time bottle detection powered by TensorFlow Lite and SwiftUI.
-The model runs entirely on-device, offering fast, offline, privacy-friendly inference.
+Real-time **water bottle detection** for iOS, powered by **TensorFlow Lite** and built with **SwiftUI**.  
+The entire model runs **on-device** — fast, offline, and completely private.
 
+https://github.com/user/BottleDetectionApp/assets/demo.gif
 
-🚀 Features
-	•	⚡ Real-time detection using the iPhone camera
-	•	🤖 Custom TensorFlow Lite model trained to detect water bottles
-	•	🔒 100% on-device — no internet, no data sharing
-	•	🧠 Uses MobileNetV2 feature extractor + custom classification head
-	•	📱 Smooth integration with SwiftUI + AVFoundation
-	•	🔄 Optimized preprocessing pipeline for accurate TFLite inference
-	•	🛠 Easy to retrain and extend with your own dataset
+## 🚀 Features
 
-🧪 Tech Stack
-	•	TensorFlow / Keras (model training)
-	•	TensorFlow Lite (inference)
-	•	Swift / SwiftUI (UI + camera)
-	•	AVFoundation (live camera frames)
-	•	CoreVideo + Accelerate (fast pixel buffer processing)
+- ⚡ Real-time detection using the iPhone camera
+- 🤖 Custom TensorFlow Lite model trained specifically to detect water bottles
+- 🔒 100% on-device inference — no internet required, no data ever leaves the device
+- 🧠 MobileNetV2 feature extractor + lightweight custom classification head
+- 📱 Native SwiftUI interface with smooth AVFoundation camera integration
+- 🔄 Highly optimized preprocessing pipeline for maximum accuracy and speed
+- 🛠 Easy to retrain or extend with your own dataset
 
+## 📸 Demo
 
-📸 How It Works
-	1.	The camera captures each frame
-	2.	Frame is resized & normalized
-	3.	Preprocessed tensor is passed to the TFLite model
-	4.	Model outputs probability of “bottle present”
-	5.	UI updates the detection label live
+![Demo](assets/demo.gif)
 
+## 🧪 Tech Stack
 
-🧠 Model Training
+- **Model Training**: TensorFlow / Keras (Python)
+- **Inference**: TensorFlow Lite
+- **iOS Frontend**: Swift 5 + SwiftUI
+- **Camera**: AVFoundation
+- **Performance**: CoreVideo + Accelerate framework for fast pixel buffer processing
+- **Dependency Management**: CocoaPods
 
-The model was trained using:
-	•	MobileNetV2 backbone
-	•	Custom binary classifier head
-	•	Image augmentation (flip, zoom, rotate)
-	•	Preprocessing: (x / 127.5) - 1.0
-	•	Exported using TFLiteConverter
+## 🚀 Getting Started
+
+### Prerequisites
+
+- iOS 15.0+
+- Xcode 15 or later
+- CocoaPods (`sudo gem install cocoapods`)
+
+### Installation
+
+1. Clone the repository
+   ```bash
+   git clone https://github.com/yourusername/BottleDetectionApp.git
+   cd BottleDetectionApp
+
+2. Install dependencies via CocoaPods
+   pod install
+
+3. Open the .xcworkspace file (not the .xcodeproj)
+4. Build and run on a real device (recommended for best camera + Neural Engine performance)
